@@ -11,11 +11,9 @@ class Quiz extends Component {
         console.log(quizData);
     }
     render() {
-        const quizjsx = quizData.quiz_questions.map(quiz => <div key={quiz.id}>{quiz.instruction_text}</div>);
-        console.log('quiz', quizjsx)
         return (
             <div>
-                <div className="QuizQuestion">{quizjsx}</div>
+                <div className="QuizQuestion">{quizData.quiz_questions[this.state.quiz_position].instruction_text}</div>
             </div>
         )
     }
